@@ -46,6 +46,7 @@ function validationImc(){
         keyboardType="numeric"
         />
         <Button 
+        onPress={() => validationImc()}
         title="Calcular IMC"
         />
       </View>

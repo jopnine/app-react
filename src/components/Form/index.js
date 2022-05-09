@@ -26,7 +26,7 @@ function validationImc(){
   }
   setImc(null)
   setTextbutton("Calcular")
-  setMessageImc("preencha o peso e altura")
+  setMessageImc("Preencha o peso e altura")
 }
 
   return(

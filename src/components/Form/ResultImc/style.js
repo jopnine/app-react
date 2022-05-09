@@ -1,16 +1,25 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  boxTitle: {
+  resultImc: {
+    flex:1,
+    marginTop:15,
+    paddingTop:60,
+    borderRadius:50,
     alignItems:"center",
-    justifyContent:"center",
-    padding:10,
+    width:"100%",
   },
-  textTitle:{
+  numberImc:{
+    fontSize:48,
     color:"#FF0043",
-    fontSize:24,
+    fontWeight:"bold",
+  },
+  information:{
+    fontSize:18,
+    color:"#FF0043",
     fontWeight:"bold",
   }
+
 });
 
 export default styles

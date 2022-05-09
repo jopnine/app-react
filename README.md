@@ -1,2 +1,2 @@
 # BMI Calculator
-A standard BMI calculator made for learning purposes.
+A standard BMI (Body Mass Index) calculator made for learning purposes.

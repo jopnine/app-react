@@ -1,5 +1,12 @@
 import React , {useState} from "react"
-import { View, Text, TextInput, TouchableOpacity } from "react-native"
+import { 
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Pressable,
+  Keyboard,
+ } from "react-native";
 import ResultImc from "./ResultImc";
 import styles from "./style";
 
@@ -12,7 +19,8 @@ const [imc,setImc]= useState(null)
 const [textButton,setTextbutton]= useState("Calcular")
 
 function imcCalculator(){
-  return setImc((weight/(height*height)).toFixed(2)) // toFixed Fixing decimal.
+  let heightFormat = height.replace(",",".")  // Used to prevent IOS users from use , instead of  .
+  return setImc((weight/(heightFormat*heightFormat)).toFixed(2)) // toFixed Fixing decimal.
 }
 
 function validationImc(){
@@ -30,7 +38,9 @@ function validationImc(){
 }
 
   return(
-    <View style={styles.formContext}>
+    <Pressable 
+    onPress={Keyboard.dismiss}
+    style={styles.formContext}>
       <View style={styles.form} >
         <Text style={styles.formLabel}>Altura</Text>
         <TextInput
@@ -61,6 +71,6 @@ function validationImc(){
       messageResultImc={messageImc}
       resultImc={imc}
        />
-    </View> //View Geral
+    </Pressable> // Using pressable instead of view, so you can dismiss the keyboard
   );
 }
